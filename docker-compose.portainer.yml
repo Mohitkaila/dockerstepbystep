@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  app:
+    image: mohikaila/dockerstepbystep:latest  
+    container_name: dockerstepbystep_container
+    restart: always
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data:/app/data
+    environment:
+      - NODE_ENV=production
